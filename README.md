@@ -8,34 +8,9 @@ A standardized hub-and-spoke architecture for orienting AI assistants (Claude, G
 
 ## How It Works
 
-```
-Session Start (automatic):
-  ┌─────────────┐     ┌──────────────┐     ┌──────────────────────┐
-  │  CLAUDE.md   │     │  MEMORY.md   │     │ discovery-protocol.md│
-  │  (rules)     │     │  (memories)  │     │ (registry + protocol)│
-  └─────────────┘     └──────────────┘     └──────────────────────┘
-        │                     │                        │
-        └─────────────────────┴────────────────────────┘
-                              │
-                     AI is now oriented
-                              │
-Entering a project (on-demand):
-                              │
-                    ┌─────────▼─────────┐
-                    │  project/STATE.md  │
-                    │  (detailed state)  │
-                    └─────────┬─────────┘
-                              │
-                    ┌─────────▼─────────┐
-                    │ project/CLAUDE.md  │
-                    │ (project rules)    │
-                    └─────────┬─────────┘
-                              │
-                    ┌─────────▼─────────┐
-                    │   Deeper docs      │
-                    │ (only if needed)   │
-                    └───────────────────┘
-```
+![Architecture Diagram](assets/architecture.png)
+
+![Session Lifecycle](assets/lifecycle.png)
 
 ## File Tiers
 
